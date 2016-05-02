@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="234.0" prefWidth="361.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="14.0" layoutY="50.0" prefHeight="30.0" prefWidth="102.0" text="usuario">
+      <font>
+        <Font size="18.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="14.0" layoutY="120.0" text="Label" />
+    <PasswordField layoutX="116.0" layoutY="117.0" prefWidth="200.0" />
+    <TextField layoutX="116.0" layoutY="58.0" prefWidth="200.0" />
+    <Button layoutX="140.0" layoutY="171.0" mnemonicParsing="false" prefWidth="73.0" text="Entrar">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+  </children>
+</AnchorPane>
