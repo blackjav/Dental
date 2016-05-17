@@ -2,7 +2,6 @@ package com.isw.dao;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 
 import com.isw.model.Operador;
 

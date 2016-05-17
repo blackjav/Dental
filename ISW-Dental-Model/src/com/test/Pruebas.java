@@ -8,8 +8,10 @@ import com.isw.model.Operador;
 
 public class Pruebas {
 
+	private static ApplicationContext appContext;
+
 	public static void main(String[] args) {
-		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/isw/spring/springMain.xml");
+		appContext = new ClassPathXmlApplicationContext("com/isw/spring/springMain.xml");
 		OperadorDao operadorDao = (OperadorDao) appContext.getBean("operadorDao");
 		
 		Operador op = new Operador();

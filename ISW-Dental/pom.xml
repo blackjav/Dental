@@ -4,20 +4,15 @@
   <artifactId>ISW-Dental</artifactId>
   <version>0.0.1-SNAPSHOT</version>
    <properties>
-<!--   	<java.home>/usr/lib64/jdk1.7.0_67</java.home> -->
-
-<!--   	<java.home>/usr/lib64/jdk1.8.0_20</java.home> -->
-	<java.home>/usr/lib/jvm/jdk1.8.0</java.home> 
+	<java.home>/usr/lib/jvm/java-8-oracle</java.home> 
   </properties>
   <dependencies>
-	<dependency>
+	<dependency> 
 	  <groupId>com.oracle</groupId>
 	  <artifactId>javafx</artifactId>	
 	  <version>8.0.66</version>
 	  <scope>system</scope>
-<!-- 	  <systemPath>${project.basedir}/lib/jfxrt.jar</systemPath> -->
-	  <systemPath>C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\jfxrt.jar</systemPath>
-<!-- 	  <systemPath>${java.home}/jre/lib/jfxswt.jar</systemPath> -->
+	  <systemPath>${java.home}/jre/lib/ext/jfxrt.jar</systemPath>
 	</dependency>
 	
 
