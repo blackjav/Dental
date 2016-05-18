@@ -11,15 +11,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import java.lang.*?>
 
-<AnchorPane prefHeight="99.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane  fx:controller="com.isw.controller.HeaderController" prefHeight="99.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="1.0" layoutY="-1.0" prefHeight="99.0" prefWidth="630.0">
+      <Pane id="pane" layoutX="1.0" layoutY="-1.0" prefHeight="99.0" prefWidth="630.0">
          <children>
             <ToolBar layoutX="0.0" layoutY="-2.0" prefHeight="99.0" prefWidth="630.0">
               <items>
               
 <!--               Botton de operador -->
-                <Button contentDisplay="TOP" mnemonicParsing="false" text="Operador">
+                <Button contentDisplay="TOP" onAction="#handleOperadorButtonAction" mnemonicParsing="false" text="Operador">
                      <graphic>
 				        <ImageView fitHeight="64.0" fitWidth="64.0">
 				          <image>
@@ -32,7 +32,7 @@
                   <Separator />
 <!--                   Boton de solicitudes -->
                   
-                  <Button contentDisplay="TOP" mnemonicParsing="false" text="Solicitudes">
+                  <Button contentDisplay="TOP" onAction="#handleSolicitudButtonAction" mnemonicParsing="false" text="Solicitudes">
                      <graphic>
 				        <ImageView fitHeight="64.0" fitWidth="64.0">
 				          <image>
@@ -45,7 +45,7 @@
                   <Separator />
 <!--                   Boton de citas  -->
 
-				<Button contentDisplay="TOP" mnemonicParsing="false" text="Citas">
+				<Button contentDisplay="TOP" onAction="#handleCitasButtonAction" mnemonicParsing="false" text="Citas">
                      <graphic>
 				        <ImageView fitHeight="64.0" fitWidth="64.0">
 				          <image>
@@ -58,7 +58,7 @@
                   <Separator />
 <!--                   Boton de Materiales  -->
 
-				<Button contentDisplay="TOP" mnemonicParsing="false" text="Materiales">
+				<Button contentDisplay="TOP" onAction="#handleMaterialesButtonAction" mnemonicParsing="false" text="Materiales">
                      <graphic>
 				        <ImageView fitHeight="64.0" fitWidth="64.0">
 				          <image>
@@ -71,7 +71,7 @@
                   <Separator />
 <!--                  Boton de pacientes   -->
 
-				<Button contentDisplay="TOP" mnemonicParsing="false" text="Pacientes">
+				<Button contentDisplay="TOP"  onAction="#handlePacientesButtonAction" mnemonicParsing="false" text="Pacientes">
                      <graphic>
 				        <ImageView fitHeight="64.0" fitWidth="64.0">
 				          <image>
@@ -84,6 +84,6 @@
               </items>
             </ToolBar>
          </children>
-      </Pane>
+         </Pane>
    </children>
 </AnchorPane>

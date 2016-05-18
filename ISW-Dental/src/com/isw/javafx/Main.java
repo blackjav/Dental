@@ -10,13 +10,13 @@ public class Main extends Application{
 	
 	public void start(Stage stage) throws Exception {
 		
-		Parent root = FXMLLoader.load (getClass().getClassLoader().getResource("com/isw/fxml/operador.fxml"));		    
+		Parent root = FXMLLoader.load (getClass().getClassLoader().getResource("com/isw/fxml/Principal.fxml"));		    
 		Scene scene = new Scene(root);
 //		stage.getIcons().add(new Image(getClass().getClassLoader().getResourceAsStream("com/fcm/ope/javafx/sources/logoblanco2.jpg")));
         stage.setTitle("Administración de citas - ESCOM IPN ");
         stage.setScene(scene);
         stage.sizeToScene();
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
 	}
 	
