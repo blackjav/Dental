@@ -5,51 +5,70 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 public class HeaderController {
-	@FXML private Window oper;
-	@FXML private Pane pane; 
 	
 	@FXML 
-    protected void handleOperadorButtonAction(ActionEvent event) {
+    protected void handleOperadorButtonAction(ActionEvent event) throws IOException {
 		System.out.println("operador");
+		Parent root = FXMLLoader.load (getClass().getClassLoader().getResource("com/isw/fxml/operador.fxml"));		    
+		Scene nueva = new Scene(root);
+        Stage actual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        actual.hide();
+        actual.setScene(nueva);
+//        actual.show();
 	}
     
 	
 	@FXML 
-    protected void handleSolicitudButtonAction(ActionEvent event) {
+    protected void handleSolicitudButtonAction(ActionEvent event) throws IOException {
 		System.out.println("solicitud");
+		Parent root = FXMLLoader.load (getClass().getClassLoader().getResource("com/isw/fxml/Solicitud.fxml"));		    
+		Scene nueva = new Scene(root);
+        Stage actual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        actual.hide();
+        actual.setScene(nueva);
+//        actual.show();
 	}
     
 	
 	@FXML 
     protected void handleCitasButtonAction(ActionEvent event) throws IOException {
-		Parent root = FXMLLoader.load (getClass().getClassLoader().getResource("com/isw/fxml/operador.fxml"));		    
-		Scene scene = new Scene(root);
-		Stage stage = new Stage();
-        stage.setTitle("Administración de citas - ESCOM IPN ");
-        stage.setScene(scene);
-        stage.sizeToScene();
-        stage.setResizable(false);
-        stage.show();
+		System.out.println("Citas");
+		Parent root = FXMLLoader.load (getClass().getClassLoader().getResource("com/isw/fxml/Citas.fxml"));		    
+		Scene nueva = new Scene(root);
+        Stage actual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        actual.hide();
+        actual.setScene(nueva);
+//        actual.show();
 	}
     
 	
 	@FXML 
-    protected void handleMaterialesButtonAction(ActionEvent event) {
+    protected void handleMaterialesButtonAction(ActionEvent event) throws IOException {
 		System.out.println("materiales");
+		Parent root = FXMLLoader.load (getClass().getClassLoader().getResource("com/isw/fxml/Materiales.fxml"));		    
+		Scene nueva = new Scene(root);
+        Stage actual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        actual.hide();
+        actual.setScene(nueva);
+//        actual.show();
 	}
     
 	
 	@FXML 
-    protected void handlePacientesButtonAction(ActionEvent event) {
+    protected void handlePacientesButtonAction(ActionEvent event) throws IOException {
 		System.out.println("paciente");
+		Parent root = FXMLLoader.load (getClass().getClassLoader().getResource("com/isw/fxml/Paciente.fxml"));		    
+		Scene nueva = new Scene(root);
+        Stage actual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        actual.hide();
+        actual.setScene(nueva);
+//        actual.show();
 	}
     
 
