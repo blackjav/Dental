@@ -1,10 +1,19 @@
 package com.isw.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
-public class SolicitudCita {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class SolicitudCita implements Serializable{
 	
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private UUID folio;
 	private Paciente paciente;
 	private String descripcion;

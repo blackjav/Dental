@@ -18,6 +18,7 @@ public class CitasAgendadas implements Serializable{
 	private Paciente paciente;
 	private Date fechaCita;
 	private boolean status;
+	
 	public long getFolio() {
 		return folio;
 	}

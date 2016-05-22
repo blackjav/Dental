@@ -14,7 +14,11 @@
 	  <scope>system</scope>
 	  <systemPath>${java.home}/jre/lib/ext/jfxrt.jar</systemPath>
 	</dependency>
-	
+<dependency>	
+  <groupId>ISW-Dental-Model</groupId>
+  <artifactId>ISW-Dental-Model</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	</dependency>
 
 	
   </dependencies>
