@@ -39,18 +39,20 @@ public class OperadorDaoImpl implements Serializable, OperadorDao{
 	}
 
 	@Override
-	public void update(Operador obj) {
+	public boolean update(Operador obj) {
 		Transaction tx = null;
         Session session = this.sessionFactory.openSession();
         try {
             tx = session.beginTransaction();
             session.update(obj);
             session.getTransaction().commit();
+            return true;
         } catch (RuntimeException e) {
             if (tx != null) {
                 tx.rollback();
             }
             e.printStackTrace();
+            return false;
         } finally {
             session.flush();
             session.close();

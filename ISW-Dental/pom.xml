@@ -7,17 +7,25 @@
 	<java.home>/usr/lib/jvm/java-8-oracle</java.home> 
   </properties>
   <dependencies>
+  
 	<dependency> 
-	  <groupId>com.oracle</groupId>
-	  <artifactId>javafx</artifactId>	
-	  <version>8.0.66</version>
-	  <scope>system</scope>
-	  <systemPath>${java.home}/jre/lib/ext/jfxrt.jar</systemPath>
+		  <groupId>com.oracle</groupId>
+		  <artifactId>javafx</artifactId>	
+		  <version>8.0.66</version>
+		  <scope>system</scope>
+		  <systemPath>${java.home}/jre/lib/ext/jfxrt.jar</systemPath>
 	</dependency>
-<dependency>	
-  <groupId>ISW-Dental-Model</groupId>
-  <artifactId>ISW-Dental-Model</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+	
+	<dependency>	
+		  <groupId>ISW-Dental-Model</groupId>
+		  <artifactId>ISW-Dental-Model</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.controlsfx</groupId>
+		<artifactId>controlsfx</artifactId>
+		<version>8.40.10</version>
 	</dependency>
 
 	
