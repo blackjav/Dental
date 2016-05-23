@@ -35,17 +35,17 @@
          </Button>
       </children>
    </Pane>
-   
-   <TextField fx:id="txtApaterno" layoutX="147.0" layoutY="423.0" />
-   <TextField fx:id="txtAmaterno" layoutX="147.0" layoutY="455.0" /> 
-   <TextField fx:id="txtUsuario" layoutX="147.0" layoutY="487.0" />
-   <TextField fx:id="txtNombre" layoutX="147.0" layoutY="391.0" />
-   <PasswordField fx:id="txtPassword" layoutX="147.0" layoutY="518.0" />
    <Label layoutX="20.0" layoutY="390.0" prefHeight="26.0" prefWidth="85.0" text="Nombre" />
    <Label layoutX="20.0" layoutY="426.0" prefHeight="26.0" prefWidth="107.0" text="Apellido Paterno" />
    <Label layoutX="20.0" layoutY="455.0" prefHeight="26.0" prefWidth="117.0" text="Apellido Materno" />
    <Label layoutX="20.0" layoutY="487.0" prefHeight="26.0" prefWidth="77.0" text="Usuario" />
    <Label layoutX="20.0" layoutY="517.0" prefHeight="26.0" prefWidth="70.0" text="Password" />
+   
+   <TextField fx:id="txtNombre" layoutX="147.0" layoutY="391.0" />
+   <TextField fx:id="txtApaterno" layoutX="147.0" layoutY="423.0" />
+   <TextField fx:id="txtAmaterno" layoutX="147.0" layoutY="455.0" /> 
+   <TextField fx:id="txtUsuario" layoutX="147.0" layoutY="487.0" />
+   <PasswordField fx:id="txtPassword" layoutX="147.0" layoutY="518.0" />
    
    <Button layoutX="68.0"  fx:id="agregarButton" layoutY="551.0" onAction="#handleAddOperatorButtonAction" text="Agregar">
    	<graphic>

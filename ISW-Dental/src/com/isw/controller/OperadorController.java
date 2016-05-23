@@ -2,13 +2,8 @@ package com.isw.controller;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
-import javax.swing.text.TabableView;
-import javax.swing.text.html.HTMLDocument.HTMLReader.HiddenAction;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -90,14 +85,48 @@ public class OperadorController implements Initializable{
 		alert.setContentText("Operador "+ operador.getNombre()+ " Guardado Exitosamente");
 		alert.showAndWait();
 		
+		tableOperador.getItems().setAll(this.operadorDao.findAll());
 		hideShow(1);
+		
 		
     }
 	
 //	TODO medtodo para actualizar un registro
 	@FXML
 	protected void handleChangeOperatorButtonAction(ActionEvent event){
+		Operador operador = this.modificar;
 		
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Operador");
+		alert.setHeaderText(" Actualizar registro " + operador.getNombre());
+		alert.setContentText("¿Estas seguro que quieres actualizar esto ?");
+
+		Optional<ButtonType> result = alert.showAndWait();
+		if (result.get() == ButtonType.OK){
+			
+			operador.setNombre(txtNombre.getText());
+			operador.setApllidoP(txtApaterno.getText());
+			operador.setUsuario(txtUsuario.getText());
+			operador.setPass(txtPassword.getText());
+			
+			if(this.operadorDao.update(operador)){
+				Alert ok = new Alert(AlertType.INFORMATION);
+				ok.setTitle("Operador");
+				ok.setHeaderText("");
+				ok.setContentText("Se ha Actualizado "+ operador.getNombre()+ " Exitosamente");
+				ok.showAndWait();
+			}
+			else{
+				Alert fail = new Alert(AlertType.ERROR);
+				fail.setTitle("Operador");
+				fail.setHeaderText("");
+				fail.setContentText("No se ha podido Actualizar "+ operador.getNombre()+ " Por razones de seguridad");
+				fail.showAndWait();
+			}
+			
+		}
+		
+		tableOperador.getItems().setAll(this.operadorDao.findAll());
 		hideShow(1);
 	}
 	
@@ -158,8 +187,6 @@ public class OperadorController implements Initializable{
 			
 			modificarButton.setDisable(false);
 	        borrarButton.setDisable(false);
-	        
-	        
 	        agregarButton.setDisable(true);
 		}
 	    
@@ -176,10 +203,11 @@ public class OperadorController implements Initializable{
 				txtAmaterno.setDisable(true);
 				txtUsuario.setDisable(true);
 				txtPassword.setDisable(true);
-				txtNombre.setText("");
-				txtApaterno.setText("");
+				txtNombre.clear();
+				txtApaterno.clear();
 				txtAmaterno.clear();
 				txtUsuario.clear();
+				txtPassword.clear();
 				agregarButton.setDisable(true);
 				borrarButton.setDisable(true);
 				modificarButton.setDisable(true);
@@ -192,8 +220,8 @@ public class OperadorController implements Initializable{
 				txtAmaterno.setDisable(false);
 				txtUsuario.setDisable(false);
 				txtPassword.setDisable(false);
-				txtNombre.setText("");
-				txtApaterno.setText("");
+				txtNombre.clear();
+				txtApaterno.clear();
 				txtAmaterno.clear();
 				txtUsuario.clear();
 				agregarButton.setDisable(false);
