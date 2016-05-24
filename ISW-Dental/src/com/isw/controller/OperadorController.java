@@ -184,13 +184,12 @@ public class OperadorController implements Initializable{
 			txtApaterno.setText(modificar.getApllidoP());
 			txtAmaterno.setText(modificar.getApellidoM());
 			txtUsuario.setText(modificar.getUsuario());
+			txtPassword.setText(modificar.getPass());
 			
 			modificarButton.setDisable(false);
 	        borrarButton.setDisable(false);
 	        agregarButton.setDisable(true);
 		}
-	    
-		
 	}
 	
 	

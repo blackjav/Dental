@@ -5,19 +5,43 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="610" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="610" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.isw.controller.PacienteController">
     <fx:include fx:id="menubar" source="Principal.fxml" />
-   <TableView layoutX="7.0" layoutY="166.0" prefHeight="362.0" prefWidth="617.0">
+   <TableView fx:id="tablePaciente" layoutX="7.0" layoutY="166.0" onMouseClicked="#handleMouseClick" prefHeight="362.0" prefWidth="617.0">
      <columns>
-       <TableColumn prefWidth="75.0" text="C1" />
-       <TableColumn prefWidth="75.0" text="C2" />
+       <TableColumn fx:id="id" prefWidth="40.0" text="ID" />
+       <TableColumn fx:id="nombre" prefWidth="73.0" text="Nombre" />
+       <TableColumn fx:id="apellidoPat" prefWidth="124.0" text="Apellido Paterno" />
+       <TableColumn fx:id="apellidoMat" prefWidth="129.0" text="Apellido Materno" />
+       <TableColumn fx:id="telefono" prefWidth="89.0" text="Telefono" />
+       <TableColumn fx:id="visitas" prefWidth="56.0" text="Visitas" />
+       <TableColumn fx:id="usuario" prefWidth="105.0" text="Usuario" />
      </columns>
    </TableView>
-   <Button layoutX="14.0" layoutY="542.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="65.0" text="Add" />
+   <Button layoutX="14.0" layoutY="542.0" mnemonicParsing="false" onAction="#handleAddOperatorButtonAction" prefHeight="26.0" prefWidth="104.0" text="Add">
+	<graphic>
+          <ImageView fitHeight="40.0" fitWidth="40.0">
+             <image>
+                <Image url="com/isw/resources/user-20.png" />
+             </image>
+          </ImageView>
+        </graphic>
+   </Button>
    <Label layoutX="16.0" layoutY="133.0" text="Buscar por clave" />
    <TextField layoutX="139.0" layoutY="129.0" />
    <Button layoutX="338.0" layoutY="128.0" mnemonicParsing="false" text="Buscar" />
+   <Button fx:id="deleteButton" layoutX="512.0" layoutY="542.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="26.0" prefWidth="104.0" text="Bprrar">
+      <graphic>
+         <ImageView fitHeight="40.0" fitWidth="40.0">
+            <image>
+               <Image url="com/isw/resources/user-20.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Button>
    
 </AnchorPane>

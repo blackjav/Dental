@@ -10,6 +10,10 @@ import javax.persistence.Id;
 @Entity
 public class Paciente implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5917666040547827624L;
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private long id;
@@ -18,6 +22,8 @@ public class Paciente implements Serializable{
 	private String apellidoMat;
 	private String telefono;
 	private long visitas;
+	private String usuario;
+	private String contraseña;
 	
 	
 	public long getId() {
@@ -40,6 +46,18 @@ public class Paciente implements Serializable{
 	}
 	public String getApellidoMat() {
 		return apellidoMat;
+	}
+	public String getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+	public String getContraseña() {
+		return contraseña;
+	}
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
 	}
 	public void setApellidoMat(String apellidoMat) {
 		this.apellidoMat = apellidoMat;

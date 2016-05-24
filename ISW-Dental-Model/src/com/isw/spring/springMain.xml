@@ -39,4 +39,9 @@
     <bean id="operadorDao" class="com.isw.dom.OperadorDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
     </bean>
+        
+    <bean id="pacienteDao" class="com.isw.dom.PacienteDaoImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+    </bean>
+    
 </beans>

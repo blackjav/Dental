@@ -8,7 +8,7 @@ import com.isw.model.Paciente;
 public interface PacienteDao {
 
 	public void create(Paciente obj);
-	public void update (Paciente obj);
+	public boolean update (Paciente obj);
 	public Paciente findOne(Paciente obj);
 	public List<Paciente> findAll();
 	public boolean delete (Paciente obj);
